@@ -24,7 +24,7 @@ This project contains the minimal code to create a Jet pipeline using Python.
    ```
 5. Run the tests:
    ```
-   python -m pytest tests
+   python3 -m pytest tests
    ```
 
 ### Creating the Jet Pipeline
@@ -35,7 +35,7 @@ This project contains the minimal code to create a Jet pipeline using Python.
    ```
 2. Submit the project directory using the configuration `CONFIG` for your cluster:
    ```
-   clc -c CONFIG job submit --name my-data-job --wait .
+   clc -c CONFIG job submit --name my-data-job .
    ```
 3. Check the list of jobs to confirm that the job is running:
    ```
