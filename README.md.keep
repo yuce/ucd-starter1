@@ -1,0 +1,44 @@
+# Hazelcast UCD Starter
+
+This project contains the minimal code to create a Jet pipeline using Python.
+
+## Usage
+
+### Running the Tests
+
+1. Create a virtual environment:
+   ```
+   python3 -m venv .venv
+   ```
+2. Activate the virtual environment (Linux/MacOS):
+   ```
+   source .venv/bin/activate
+   ```
+3. Activate the virtual environment (Windows):
+   ```
+   .\.venv/Scripts/activate
+   ```
+4. Install the test requirements:
+   ```
+   pip install -r test-requirements.txt
+   ```
+5. Run the tests:
+   ```
+   python -m pytest tests
+   ```
+
+### Creating the Jet Pipeline
+
+1. Ensure you have the CLC configuration for your Viridian configuration exists:
+   ```
+   clc config list
+   ```
+2. Submit the project directory using the configuration `CONFIG` for your cluster:
+   ```
+   clc -c CONFIG job submit --name my-data-job --wait .
+   ```
+3. Check the list of jobs to confirm that the job is running:
+   ```
+   clc -c CONFIG job list
+   ```
+

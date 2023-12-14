@@ -1,0 +1,14 @@
+pipeline:
+
+  source:
+    type: ITEM-STREAM
+    items-per-second: 1
+
+  transform:
+    - type: PYTHON
+      base-image: "emreyigit/python-base"
+      module: "job.transform"
+
+  sink:
+    type: LOGGER
+
